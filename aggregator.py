@@ -1,8 +1,10 @@
 import tkinter as tk
 from tkinter import filedialog
 import os
+import subprocess
 
-os.system("cls")
+clsc = 'cls' if os.name == "nt" else "clear"
+subprocess.run(clsc, shell=True, check=True)
 
 root = tk.Tk()
 root.withdraw()
